@@ -144,25 +144,27 @@
 
     .portfolio-header h3 {
       font-size: 1.4rem;
-      color: #4b0082;
+      color: #000;
       margin-bottom: 10px;
     }
 
-    .tech-tags {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 15px;
+    .tech-tags span {
+      display: inline-block;
+      color: black;
+      border: 1.8px solid #ffc107;
+      padding: 6px 12px; /* ছোট padding */
+      border-radius: 20px; /* কম বৃত্তাকার */
+      font-weight: 500;
+      background: transparent;
+      font-size: 0.8rem; /* Font size ছোট */
+      transition: all 0.3s ease;
     }
 
-    .tech-tags span {
-      background: #eee;
-      color: #4b0082;
-      font-weight: 500;
-      padding: 5px 12px;
-      border-radius: 25px;
-      font-size: 0.85rem;
+    .tech-tags span:hover {
+      background: #ffc107;
+      color: #000;
+      box-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
+      transform: translateY(-2px);
     }
 
     .portfolio-images {
@@ -231,6 +233,81 @@
       transform: translateY(-1px); /* Optional slight lift */
     }
 
+    /* ===============================
+   Tech Stack Section Design (Updated Compact Version)
+=============================== */
+    
+    .service-item {
+      background: #1e1e1e;
+      padding: 40px 15px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 193, 7, 0.1);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    
+
+    .tech-stack {
+      background: #1e1e1e;
+      padding: 40px 15px;
+      margin-top: 50px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 193, 7, 0.1);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .tech-stack-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffc107;
+      margin-bottom: 25px;
+      text-shadow: 0 0 8px rgba(255, 193, 7, 0.4);
+    }
+
+    /* Compact Tags */
+    .tech-tags0 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px; /* gap কমানো হয়েছে */
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .tech-tags0 span {
+      display: inline-block;
+      color: #fff;
+      border: 1.8px solid #ffc107;
+      padding: 6px 12px; /* ছোট padding */
+      border-radius: 20px; /* কম বৃত্তাকার */
+      font-weight: 500;
+      background: transparent;
+      font-size: 0.8rem; /* Font size ছোট */
+      transition: all 0.3s ease;
+    }
+
+    .tech-tags0 span:hover {
+      background: #ffc107;
+      color: #000;
+      box-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* Smooth fade-in */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
   </style>
 
 </head>
@@ -258,7 +335,7 @@
         <div class="info-content">
           <h1 class="name" title="Richard hanrick">TANVIR TAMIM</h1>
 
-          <p class="title">Software Engineer</p>
+          <p class="title">Software Developer</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -415,24 +492,6 @@
           <h3 class="h3 service-title">What i'm doing</h3>
 
           <ul class="service-list">
-
-            <!-- <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
- -->
             <li class="service-item">
 
               <div class="service-icon-box">
@@ -440,7 +499,7 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
+                <h4 class="h4 service-item-title">Web Development</h4>
 
                 <p class="service-item-text">
                   High-quality development of sites at the professional level.
@@ -456,7 +515,7 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
+                <h4 class="h4 service-item-title">Mobile Apps Development</h4>
 
                 <p class="service-item-text">
                   Professional development of applications for iOS and Android.
@@ -464,8 +523,6 @@
               </div>
 
             </li>
-
- 
 
           </ul>
 
@@ -517,66 +574,34 @@
 
         </div>
 
- 
- 
-       <!-- skill -->
-      <section class="skill">
-        <h3 class="h3 skills-title">My Skills</h3>
 
-        <div class="skills-container">
-          
-          <div class="skill-card">
-            <div class="skill-icon frontend">💻</div>
-            <h4>Frontend</h4>
-            <ul>
-              <li>HTML, CSS </li>
-              <li>Bootstrap</li>
-              <li>JavaScript</li>
-              <li>Vue.js</li>
+       <!-- ======= Tech Stack Section ======= -->
+      <section class="tech-stack">
+        <h3 class="h3 tech-stack-title">Tech Stack</h3>
 
-            </ul>
-          </div>
+        <div class="tech-tags0">
 
-          <div class="skill-card">
-            <div class="skill-icon backend">🖥️</div>
-            <h4>Backend</h4>
-            <ul>
-              <li>PHP</li>
-              <li>Laravel</li>
-              <li>RESTful API</li>
-              <li>Sanctum/Auth</li>
-            </ul>
-          </div>
-
-          <div class="skill-card">
-            <div class="skill-icon database">🗄️</div>
-            <h4>Databases</h4>
-            <ul>
-              <li>MySQL</li>
-              
-            </ul>
-          </div>
-
-          <div class="skill-card">
-            <div class="skill-icon tools">🛠️</div>
-            <h4>Tools & Others</h4>
-            <ul>
-              <li>Git & GitHub</li>
-              <li>Postman</li>
- 
-            </ul>
-          </div>
-
+          <span>Bootstrap</span>
+          <span>Javascript</span>
+          <span>Vue JS</span>
+          <span>PHP</span>
+          <span>Laravel</span>
+          <span>Flutter</span>
+          <span>Python</span>
+          <span>C Programming</span>
+          <span>C++</span>
+          <span>MySQL</span>
+          <span>Rest API</span>
+          <span>Jwt</span>
+          <span>Git</span>
+          <span>Linux</span>
+          <span>Meta Bussiness API</span>
+          <span>Web Application Development</span>
+          <span>Mobile App Development</span>
         </div>
       </section>
 
-
-       
       </article>
-
-
-
-
 
       <!--
         - #RESUME
@@ -722,7 +747,7 @@
             <!-- Portfolio Card 1 -->
             <div class="portfolio-card">
               <div class="portfolio-header">
-                <h3>Happy Banking </h3>
+                <h3 class="h3 tech-stack-title">Happy Banking </h3>
                 <div class="tech-tags">
                   <span>PHP</span>
                   <span>Laravel</span>
